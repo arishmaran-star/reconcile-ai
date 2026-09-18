@@ -1,0 +1,878 @@
+// Monthly Income
+color: #00342B;
+ font-size: 24px;
+ font-family: Playfair Display;
+ font-weight: 600;
+ line-height: 32px;
+ word-wrap: break-word
+---
+// ₹ in Lakhs
+color: #735C00;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Earnings trends across the last 12 calendar months (Jan to Dec)
+color: #707975;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// 1M
+color: #3F4945;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// 6M
+color: #3F4945;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// 12M
+color: #00342B;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+//  Nov: ₹1.65 Lakhs 
+color: white;
+ font-size: 7.22px;
+ font-family: Manrope;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// ₹2.00 Lakhs
+color: rgba(112, 121, 117, 0.70);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Upper Escrow Limit
+color: rgba(112, 121, 117, 0.40);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹1.50 Lakhs
+color: rgba(112, 121, 117, 0.70);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Target Threshold
+color: rgba(112, 121, 117, 0.40);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹1.00 Lakhs
+color: rgba(112, 121, 117, 0.70);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Median Floor
+color: rgba(112, 121, 117, 0.40);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹0.50 Lakhs
+color: rgba(112, 121, 117, 0.70);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹0.00
+color: rgba(112, 121, 117, 0.70);
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Jan
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Feb
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Mar
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Apr
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// May
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Jun
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Jul
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Aug
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Sep
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Oct
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Nov
+color: #00342B;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Dec
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// AVERAGE MONTHLY INCOME
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// ₹1,23,750
+color: #1A1C1D;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 20px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// PROJECTED NEXT MONTH
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// ₹1,75,000
+color: #004D40;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 20px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// ESCROW RELEASE SPEED
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// Under 48 Hours
+color: #735C00;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 20px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// Recent Bank Transfers &<br/>Settlements
+color: #00342B;
+ font-size: 24px;
+ font-family: Playfair Display;
+ font-weight: 600;
+ line-height: 32px;
+ word-wrap: break-word
+---
+// Direct deposits transferred to your verified<br/>institutional bank account
+color: #707975;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// Bank<br/>Partner:
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// HDFC Private Banking<br/>•••• 9012
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// TRANSACTION<br/>ID
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// SERVICE<br/>DESCRIPTION
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// RELEASE<br/>DATE
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// PAYMENT<br/>METHOD
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// SETTLEMENT<br/>STATUS
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// SETTLED<br/>AMOUNT
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ text-transform: uppercase;
+ line-height: 14px;
+ letter-spacing: 0.50px;
+ word-wrap: break-word
+---
+// #TXN-<br/>88491
+color: #00342B;
+ font-size: 12px;
+ font-family: Liberation Mono;
+ font-weight: 700;
+ line-height: 16px;
+ letter-spacing: 0.48px;
+ word-wrap: break-word
+---
+// Luxury<br/>Rolls-<br/>Royce<br/>Chauffeur<br/>(Wedding<br/>Package)
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 500;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// 18 Nov 2024
+color: #707975;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// NEFT<br/>Fast<br/>Transfer
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// Paid to<br/>You
+color: #004D40;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹2,50,000
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// #TXN-<br/>88490
+color: #00342B;
+ font-size: 12px;
+ font-family: Liberation Mono;
+ font-weight: 700;
+ line-height: 16px;
+ letter-spacing: 0.48px;
+ word-wrap: break-word
+---
+// Private<br/>Heritage<br/>Villa Stay (4<br/>Nights<br/>Booking)
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 500;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// 14 Nov 2024
+color: #707975;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// Direct<br/>Bank<br/>Wire
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// Paid to<br/>You
+color: #004D40;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹3,20,000
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// #TXN-<br/>88489
+color: #00342B;
+ font-size: 12px;
+ font-family: Liberation Mono;
+ font-weight: 700;
+ line-height: 16px;
+ letter-spacing: 0.48px;
+ word-wrap: break-word
+---
+// Executive<br/>Helicopter<br/>Charter<br/>(Mumbai to<br/>Pune)
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 500;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// 21 Nov 2024<br/>(Scheduled)
+color: #707975;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// Escrow<br/>Clearing
+color: #1A1C1D;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// Pending<br/>Escrow
+color: #735C00;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹1,75,000
+color: #735C00;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// Top Selling<br/>Services
+color: #00342B;
+ font-size: 20px;
+ font-family: Playfair Display;
+ font-weight: 600;
+ line-height: 28px;
+ word-wrap: break-word
+---
+// Ranked by gross customer<br/>revenue
+color: #707975;
+ font-size: 13px;
+ font-family: Manrope;
+ font-weight: 400;
+ line-height: 18px;
+ word-wrap: break-word
+---
+// View<br/>All
+color: #00342B;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// 1
+color: #241A00;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Luxury Rolls-<br/>Royce<br/>Chauffeur
+color: #1A1C1D;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 19.25px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// 4.9
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// (128<br/>reviews)
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹5,00,000
+color: #004D40;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 20px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// Revenue
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Available Now
+color: #00342B;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Manage Service
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// 2
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Private<br/>Heritage Villa<br/>Stay
+color: #1A1C1D;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 19.25px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// 5.0
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// (64<br/>reviews)
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹4,50,000
+color: #004D40;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 20px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// Revenue
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Booked for<br/>Weekend
+color: #735C00;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Manage<br/>Service
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// 3
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Executive<br/>Helicopter<br/>Charter
+color: #1A1C1D;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 19.25px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// 4.9
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// (42<br/>reviews)
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹3,50,000
+color: #004D40;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 20px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// Revenue
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Available Now
+color: #00342B;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Manage Service
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// 4
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Grand Palace<br/>Wedding Tent
+color: #1A1C1D;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 19.25px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// 4.8
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// (35<br/>reviews)
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹1,85,000
+color: #004D40;
+ font-size: 14px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 20px;
+ letter-spacing: 0.28px;
+ word-wrap: break-word
+---
+// Revenue
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Seasonal<br/>Active
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Manage<br/>Service
+color: #1A1C1D;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// Combined Top 4 Revenue
+color: #707975;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 700;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
+---
+// ₹14,85,000
+color: #00342B;
+ font-size: 20px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ line-height: 28px;
+ word-wrap: break-word
+---
+// Represents 100% of collected YTD<br/>earnings
+color: #00342B;
+ font-size: 10px;
+ font-family: Manrope;
+ font-weight: 600;
+ line-height: 14px;
+ letter-spacing: 0.80px;
+ word-wrap: break-word
