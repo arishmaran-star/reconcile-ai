@@ -1,7 +1,0 @@
-fastapi
-uvicorn[standard]
-python-multipart
-google-genai
-python-dotenv
-Pillow
-supabase
