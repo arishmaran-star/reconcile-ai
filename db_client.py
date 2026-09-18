@@ -5,6 +5,7 @@ from supabase import create_client, Client
 # Load environment variables
 load_dotenv()
 
+# Python will look inside .env for these exact labels
 url = os.environ.get("SUPABASE_URL")
 key = os.environ.get("SUPABASE_KEY")
 
