@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Liberation+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 20px; background-color: #f5f5f5; font-family: 'Manrope', sans-serif;">
+
+    <!-- AI RECONCILIATION UPLOAD ENGINE -->
+    <div style="padding: 28px; background: white; border-radius: 8px; margin-bottom: 20px; outline: 1px solid rgba(229, 226, 218, 0.85); box-shadow: 0px 8px 24px -4px rgba(212, 175, 55, 0.06);">
+        <h2 style="color: #00342B; font-family: 'Playfair Display'; margin-top: 0; margin-bottom: 15px;">AI Invoice Upload</h2>
+        <p style="color: #707975; font-size: 13px; margin-bottom: 15px;">Upload a Proforma Invoice, receipt, or PDF to extract data and run the 3-way match.</p>
+        
+        <input type="file" id="invoiceInput" accept=".jpg, .jpeg, .png, .pdf" style="margin-right: 15px; font-family: 'Manrope';" />
+        <button id="uploadBtn" style="padding: 10px 24px; background: #004D40; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-family: 'Manrope';">
+            Extract & Reconcile
+        </button>
+        
+        <pre id="resultText" style="margin-top: 20px; text-align: left; background: #181A1B; color: #00FF00; padding: 15px; border-radius: 4px; display: none; overflow-x: auto; font-family: 'Liberation Mono', monospace; font-size: 12px;"></pre>
+    </div>
+
+    <!-- YOUR TEAMMATE's ORIGINAL UI DESIGN -->
+    <div style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+        <div style="align-self: stretch; padding: 28px; position: relative; background: white; border-radius: 8px; outline: 1px rgba(229, 226, 218, 0.85) solid; outline-offset: -1px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
+            <div style="width: 602.66px; height: 528.80px; left: 0px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0); box-shadow: 0px 8px 24px -4px rgba(212, 175, 55, 0.06), 0px 1px 3px rgba(24, 26, 27, 0.02); border-radius: 8px"></div>
+            <div style="align-self: stretch; padding-bottom: 24px; padding-right: 0.01px; border-bottom: 1px rgba(191, 201, 196, 0.25) solid; justify-content: space-between; align-items: center; display: inline-flex">
+                <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; display: inline-flex">
+                    <div style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
+                        <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                            <div style="justify-content: center; display: flex; flex-direction: column; color: #00342B; font-size: 24px; font-family: Playfair Display; font-weight: 600; line-height: 32px; word-wrap: break-word">Monthly Income</div>
+                        </div>
+                        <div style="padding-left: 8px; padding-right: 8px; padding-top: 2px; padding-bottom: 2px; background: rgba(255, 224, 136, 0.30); border-radius: 2px; outline: 1px rgba(115, 92, 0, 0.20) solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                            <div style="justify-content: center; display: flex; flex-direction: column; color: #735C00; font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">₹ in Lakhs</div>
+                        </div>
+                    </div>
+                    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 13px; font-family: Manrope; font-weight: 400; line-height: 18px; word-wrap: break-word">Earnings trends across the last 12 calendar months (Jan to Dec)</div>
+                    </div>
+                </div>
+                <div style="padding: 4px; background: #F3F3F4; border-radius: 4px; outline: 1px rgba(191, 201, 196, 0.40) solid; outline-offset: -1px; justify-content: flex-start; align-items: flex-start; display: flex">
+                    <div style="padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px; border-radius: 2px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #3F4945; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">1M</div>
+                    </div>
+                    <div style="padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px; border-radius: 2px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #3F4945; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">6M</div>
+                    </div>
+                    <div style="padding-left: 12px; padding-right: 12px; padding-top: 4px; padding-bottom: 4px; background: white; border-radius: 2px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #00342B; font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">12M</div>
+                    </div>
+                </div>
+            </div>
+            <div style="align-self: stretch; padding-top: 24px; padding-bottom: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                <div style="align-self: stretch; max-height: 360px; padding-top: 16px; padding-bottom: 24px; position: relative; flex-direction: column; justify-content: center; align-items: flex-start; display: flex">
+                    <div style="align-self: stretch; height: 196.80px; position: relative">
+                        <div style="width: 490.20px; height: 143.01px; left: 27.23px; top: 34.11px; position: absolute; background: linear-gradient(180deg, rgba(0, 77, 64, 0.22) 0%, rgba(0, 77, 64, 0.04) 70%, rgba(255, 255, 255, 0) 100%)"></div>
+                        <div style="width: 490.20px; height: 116.77px; left: 27.23px; top: 34.11px; position: absolute; outline: 2.10px #004D40 solid; outline-offset: -1.05px"></div>
+                        <div style="width: 4.90px; height: 5.90px; left: 24.78px; top: 147.93px; position: absolute; background: white; outline: 1.50px #004D40 solid; outline-offset: -0.75px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 69.17px; top: 135.14px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 113.84px; top: 144.98px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 158.50px; top: 118.74px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 203.16px; top: 102.34px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 247.82px; top: 112.18px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 291.94px; top: 89.22px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 336.60px; top: 79.38px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 381.27px; top: 69.54px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 4.36px; height: 5.25px; left: 425.93px; top: 56.42px; position: absolute; background: white; outline: 1.20px #004D40 solid; outline-offset: -0.60px"></div>
+                        <div style="width: 7.63px; height: 9.18px; left: 468.96px; top: 29.52px; position: absolute; background: #D4AF37; outline: 1.80px white solid; outline-offset: -0.90px"></div>
+                        <div style="width: 63.18px; height: 19.68px; left: 441.18px; top: 5.25px; position: absolute; opacity: 0.95; background: #181A1B"></div>
+                        <div style="width: 60.28px; height: 9.86px; left: 472.76px; top: 10.02px; position: absolute">
+                            <div style="width: 60.28px; height: 9.86px; left: 0px; top: 0px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 7.22px; font-family: Manrope; font-weight: 700; word-wrap: break-word"> Nov: ₹1.65 Lakhs </div>
+                        </div>
+                        <div style="width: 4.36px; height: 3.28px; left: 470.59px; top: 24.93px; position: absolute; opacity: 0.95; background: #181A1B"></div>
+                        <div style="width: 5.45px; height: 6.56px; left: 514.71px; top: 45.92px; position: absolute; background: white; outline: 1.50px #004D40 solid; outline-offset: -0.75px"></div>
+                    </div>
+                    <div style="width: 544.66px; height: 236.80px; left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: space-between; align-items: flex-start; display: flex">
+                        <div style="align-self: stretch; padding-bottom: 4px; border-bottom: 1px rgba(191, 201, 196, 0.30) solid; justify-content: space-between; align-items: center; display: inline-flex">
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.70); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">₹2.00 Lakhs</div>
+                            </div>
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.40); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Upper Escrow Limit</div>
+                            </div>
+                        </div>
+                        <div style="align-self: stretch; padding-bottom: 4px; border-bottom: 1px rgba(191, 201, 196, 0.30) solid; justify-content: space-between; align-items: center; display: inline-flex">
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.70); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">₹1.50 Lakhs</div>
+                            </div>
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.40); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Target Threshold</div>
+                            </div>
+                        </div>
+                        <div style="align-self: stretch; padding-bottom: 4px; padding-right: 0.01px; border-bottom: 1px rgba(191, 201, 196, 0.30) solid; justify-content: space-between; align-items: center; display: inline-flex">
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.70); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">₹1.00 Lakhs</div>
+                            </div>
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.40); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Median Floor</div>
+                            </div>
+                        </div>
+                        <div style="align-self: stretch; padding-bottom: 4px; border-bottom: 1px rgba(191, 201, 196, 0.40) solid; justify-content: flex-start; align-items: center; display: inline-flex">
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.70); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">₹0.50 Lakhs</div>
+                            </div>
+                        </div>
+                        <div style="align-self: stretch; padding-top: 4px; justify-content: flex-start; align-items: center; display: inline-flex">
+                            <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                                <div style="align-self: stretch; justify-content: center; display: flex; flex-direction: column; color: rgba(112, 121, 117, 0.70); font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">₹0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="align-self: stretch; padding-top: 8px; justify-content: center; align-items: flex-start; display: inline-flex">
+                    <div style="width: 45.38px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Jan</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Feb</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Mar</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Apr</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">May</div>
+                    </div>
+                    <div style="width: 45.38px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Jun</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Jul</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Aug</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Sep</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Oct</div>
+                    </div>
+                    <div style="width: 45.39px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #00342B; font-size: 10px; font-family: Manrope; font-weight: 700; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Nov</div>
+                    </div>
+                    <div style="width: 45.38px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+                        <div style="text-align: center; justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 600; line-height: 14px; letter-spacing: 0.80px; word-wrap: break-word">Dec</div>
+                    </div>
+                </div>
+            </div>
+            <div style="align-self: stretch; padding-top: 16px; border-top: 1px rgba(191, 201, 196, 0.25) solid; justify-content: center; align-items: flex-start; gap: 16px; display: inline-flex">
+                <div style="width: 170.88px; padding-top: 19px; padding-bottom: 12px; padding-left: 12px; padding-right: 12px; background: rgba(243, 243, 244, 0.70); border-radius: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 700; text-transform: uppercase; line-height: 14px; letter-spacing: 0.50px; word-wrap: break-word">AVERAGE MONTHLY INCOME</div>
+                    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="align-self: stretch; justify-content: center; display: flex; flex-direction: column; color: #1A1C1D; font-size: 14px; font-family: Manrope; font-weight: 700; line-height: 20px; letter-spacing: 0.28px; word-wrap: break-word">₹1,23,750</div>
+                    </div>
+                </div>
+                <div style="width: 170.89px; padding-top: 19px; padding-bottom: 12px; padding-left: 12px; padding-right: 12px; background: rgba(243, 243, 244, 0.70); border-radius: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 700; text-transform: uppercase; line-height: 14px; letter-spacing: 0.50px; word-wrap: break-word">PROJECTED NEXT MONTH</div>
+                    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="align-self: stretch; justify-content: center; display: flex; flex-direction: column; color: #004D40; font-size: 14px; font-family: Manrope; font-weight: 700; line-height: 20px; letter-spacing: 0.28px; word-wrap: break-word">₹1,75,000</div>
+                    </div>
+                </div>
+                <div style="width: 170.89px; padding-top: 19px; padding-bottom: 12px; padding-left: 12px; padding-right: 12px; background: rgba(243, 243, 244, 0.70); border-radius: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                    <div style="justify-content: center; display: flex; flex-direction: column; color: #707975; font-size: 10px; font-family: Manrope; font-weight: 700; text-transform: uppercase; line-height: 14px; letter-spacing: 0.50px; word-wrap: break-word">ESCROW RELEASE SPEED</div>
+                    <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
+                        <div style="align-self: stretch; justify-content: center; display: flex; flex-direction: column; color: #735C00; font-size: 14px; font-family: Manrope; font-weight: 700; line-height: 20px; letter-spacing: 0.28px; word-wrap: break-word">Under 48 Hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- REMAINDER OF TEAMMATE'S HTML (Recent Bank Transfers, Top Selling Services, etc) OMITTED FOR BREVITY BUT KEPT IN YOUR LOCAL FILE -->
+
+    </div>
+
+    <!-- Link the JavaScript engine -->
+    <script src="script.js"></script>
+</body>
+</html>
