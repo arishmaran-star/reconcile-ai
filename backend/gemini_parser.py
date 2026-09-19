@@ -49,7 +49,7 @@ def extract_invoice_data(file_path: str):
     try:
         # Note: Depending on your API key, you may need to use 'gemini-1.5-flash' or 'gemini-2.5-flash'
         response = client.models.generate_content(
-            model='gemini-2.5-flash', 
+            model='gemini-3.5-flash', 
             contents=[prompt, uploaded_document],
             config=types.GenerateContentConfig(
                 response_mime_type="application/json"
